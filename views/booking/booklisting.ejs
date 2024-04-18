@@ -11,7 +11,7 @@
                </div>
                <div class="mb-3">
                     <label for="guest" class="form-label">Guests</label>
-                    <input name="book[guest]" id="guest" type="number" min="0" max="20" class="form-control" placeholder="Enter upto 20 guests" required>
+                    <input name="book[guest]" id="guest" type="number" min="0" max="5" class="form-control" placeholder="Enter upto 5 guests" required>
                 </div>
                 <div class="row">
                     <div class="mb-3 col-md-6">
@@ -40,3 +40,14 @@
         </div>
     </div>
 </body>
+<script>
+    document.getElementById('guest').addEventListener('blur', function() {
+        // Get the input value
+        let value = parseInt(this.value);
+        
+        // If value is greater than 20, set it to 20
+        if (value > 5) {
+            this.value = 5;
+        }
+    });
+</script>

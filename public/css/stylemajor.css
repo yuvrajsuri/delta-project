@@ -14,7 +14,8 @@ body{
     background-color: white;
 }
 
-.fa-compass{
+.fa-plane{
+    margin-left: 10px;
     color: #fe424d;
     font-size: 2rem;
 }
