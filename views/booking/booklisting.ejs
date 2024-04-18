@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-3">
+            <h3>Confirm and Pay</h3>
+            <form action="/listings/pay" method="post" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input name="book[username]" id="username" type="text" class="form-control" required>
+               </div>
+               <div class="mb-3">
+                    <label for="guest" class="form-label">Guests</label>
+                    <input name="book[guest]" id="guest" type="number" min="0" max="20" class="form-control" placeholder="Enter upto 20 guests" required>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="from" class="form-label">From</label><br>
+                        <input name="book[from]" id="from" type="date" class="form-control" required>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="to" class="form-label">To</label><br>
+                        <input name="book[to]" id="to" type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Check-in time</label>
+                    <input name="book[time]" id="time" type="time" maxlength="10" class="form-control"  required>
+                </div>
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact number</label>
+                    <input name="book[contact]" id="contact" type="tel" maxlength="10" class="form-control"  required>
+                </div>
+                <div class="mb-3">
+                    <label for="rate" class="form-label">Price and place </label>
+                    <input name="book[rate]" id="rate" value="&#8377; <%= listing.price.toLocaleString("en-IN") %> / night  at <%= listing.title %>" class="form-control"  required readonly>
+                </div>
+               <button type="submit" class="btn btn-success">Proceed to Pay</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('guest').addEventListener('blur', function() {
+        // Get the input value
+        let value = parseInt(this.value);
+        
+        // If value is greater than 20, set it to 20
+        if (value > 20) {
+            this.value = 20;
+        }
+    });
+</script>

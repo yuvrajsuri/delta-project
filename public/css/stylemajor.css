@@ -1,0 +1,198 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+/* footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;    
+}
+
+.f-info-links , .f-info-socials, .f-info-brand{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.fa-square-facebook{
+    color: #316FF6;
+}
+.fa-square-instagram{
+    color: #E4405F;
+}
+.fa-linkedin{
+    color: #0077B5;
+}
+
+
+/* CARDS */
+/* card class present in index.js */
+.listing-card{                
+    border: none !important;
+    margin-bottom: 2rem;
+    opacity: 1;
+}
+
+.card-hover{
+    opacity: 1;
+}
+
+.card-hover:hover{
+    /* height: 21rem;
+    
+    transition-delay: 1ms; */
+    opacity: 0.8;
+    background-color: white;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+.card-text{
+    font-weight: 400 !important;
+}
+
+.listing-link{
+    text-decoration: none ;
+}
+
+/* Card Effect */
+.card-img-overlay{
+    opacity: 1;
+}
+
+.card-img-overlay :hover{
+    opacity: 1.2;
+    background-color: white;
+}
+
+/* New Page */
+.add-btn{
+    background-color:#fe424d !important;
+    border: none !important;
+}
+
+/* Edit page */
+.edit-btn{
+    background-color:#fe424d !important;
+    border: none !important;
+}
+
+/* show page */
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+    /* height: 40px; */
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* LOGIN PAGE */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the form */
+.animated-form {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Initial shadow */
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Intermediate shadow */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Final shadow */
+    }
+}
+
+/* Apply the animation to the card */
+.glowing-card {
+    animation: glow 1.5s infinite alternate; /* Apply the glow animation */
+}
+
+
+/* signup , login  button*/
+
+.nav-btn{
+    background-color: #fe424d !important;
+    color: white !important;
+}
+.nav-btn:hover{
+    background-color: #fe424d !important;
+    color: white !important;
+}
+
+/* .body-img{
+    background-image:url(https://www.shutterstock.com/image-vector/illustration-airplane-flying-over-sketch-260nw-110802230.jpg);
+    
+} */
+
+
+/* map styling */
+#map{
+    height: 400px;
+    width: 80vh;
+}

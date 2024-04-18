@@ -1,0 +1,75 @@
+.nav-btn {
+    color: white !; /* Text color */
+    height: 50px;
+    width: 100px;
+    
+    background-color: #fe424fe1; /* Background color */
+    
+    padding: 5px 15px; /* Padding */
+    border: none; /* No border */
+    border-radius: 10%; /* Half of the button width for a perfect circle */
+    text-align: center; /* Center text horizontally */
+    display: inline-block; /* Display as inline-block to adjust width and height */
+    cursor: pointer; /* Cursor style on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    text-decoration: none; /* Remove underline */
+    
+}
+
+.nav-btn:hover{
+    color: white; /* Text color */
+    height: 50px;
+    width: 100px;
+    
+    background-color: #fe424fe1; /* Background color */
+    
+    padding: 5px 15px; /* Padding */
+    border: none; /* No border */
+    border-radius: 10%; /* Half of the button width for a perfect circle */
+    text-align: center; /* Center text horizontally */
+    display: inline-block; /* Display as inline-block to adjust width and height */
+    cursor: pointer; /* Cursor style on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    text-decoration: none; /* Remove underline */
+}
+
+.logout{
+    
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #D7444A;
+}
+
+@media(width:400px){
+    body{
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+
+    }
+    .androids{
+        height: 100%;
+        width: 100%;
+        scroll-snap-type: y mandatory;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .android{
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+}
