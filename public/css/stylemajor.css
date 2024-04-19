@@ -194,6 +194,22 @@ body{
 
 /* map styling */
 #map{
-    height: 400px;
-    width: 80vh;
+    /* height: 400px; */
+    /* width: 80vh; */
+    /* Define a class for the map container */
+    width: 100%; /* Make the map container take up the full width of its parent */
+    height: 300px; /* Set an initial height for the map */
+    max-width: 100%; /* Ensure the map container does not exceed the screen width */
+    margin: 0 auto; /* Center the map container horizontally */
 }
+
+/* Adjust the height of the map container for smaller screens */
+@media screen and (max-width: 414px) {
+    .map-container {
+        height: 200px; /* Adjust the height for iPhone 14 Pro Max and similar devices */
+    }
+}
+
+
+
+
