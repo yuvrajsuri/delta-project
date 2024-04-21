@@ -51,6 +51,7 @@ router.get(
     isOwner,
     wrapAsync(listingController.renderEditForm));
 
+//Booking Route
 router.get(
     "/:id/book",
     isLoggedIn,
@@ -60,7 +61,8 @@ router.post(
     "/pay",
     isLoggedIn,
     wrapAsync(listingController.payListing));
-    
+
+//Pay Route    
 router.get("/payroute", 
     isLoggedIn, 
     listingController.getPayRoute);
