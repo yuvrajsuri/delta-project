@@ -12,6 +12,11 @@
                     <label for="cardNumber" class="form-label">Card Number</label>
                     <input name="cardNumber" id="cardNumber" type="text" maxlength="19" class="form-control" required oninput="formatCardNumber(this);">
                 </div>
+                <div class="mb-3 col-md-6">
+                    <label for="cvv" class="form-label">CVV</label><br>
+                    <input name="cvv" id="cvv" type="number" maxlength="3" class="form-control" required oninput="validateCVV(this)">
+                </div>
+                
                 <div class="row">
                     <div class="mb-3 col-md-6">
                         <label for="month" class="form-label">Month</label><br>
@@ -19,7 +24,7 @@
                     </div>
                     <div class="mb-3 col-md-6">
                         <label for="year" class="form-label">Year</label><br>
-                        <input name="year" id="year" type="text" maxlength="4" class="form-control" onkeyup="validateYear(this);">
+                        <input name="year" id="year" type="text" maxlength="4" max="2050" min="2024" class="form-control" onkeyup="validateYear(this);" required>
 
                     </div>
                 </div>
@@ -61,8 +66,25 @@ function validateYear(input) {
     // Remove non-numeric characters
     let year = input.value.replace(/\D/g, '');
 
+    // Ensure the year is within the specified range
+    year = Math.max(2024, Math.min(2050, year));
+
     // Update the input value with the sanitized year
     input.value = year;
+}
+
+function validateCVV(input) {
+    // Remove non-numeric characters
+    let cvv = input.value.replace(/\D/g, '');
+
+    // Ensure the CVV is a 3-digit number
+    if (cvv.length > 3) {
+        // If more than 3 digits entered, trim the input to 3 digits
+        input.value = cvv.slice(0, 3);
+    } else {
+        // If the CVV is valid, update the input value with the sanitized value
+        input.value = cvv;
+    }
 }
 </script>
     
