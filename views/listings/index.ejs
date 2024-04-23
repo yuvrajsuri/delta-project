@@ -84,7 +84,14 @@
       </div>
     </div>
   </div>
-  
+
+  <%if(currUser && currUser._id == '6627b1ea3bdddf2624c77de5'){ %>
+    <div class="btns col-8 ">
+        <form action="/listings/admin/allbookings" method="get">
+            <button class="btn nav-btn">all bookings</button>
+        </form>
+    </div>
+<% } %>
 
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
     <% for(let listing of allListings) { %>

@@ -1,5 +1,5 @@
 const { time } = require('console');
-const { date, number } = require('joi');
+const { date, number, required } = require('joi');
 const mongoose = require('mongoose');
 const { type } = require('os');
 const Schema = mongoose.Schema;
@@ -31,7 +31,11 @@ const bookSchema = new Schema({
     contact : {
         type : Number,
         required : true
-    } 
+    }, 
+    rate : {
+        type : String,
+        required : true
+    }
 });
 
 module.exports = mongoose.model("Book",bookSchema);

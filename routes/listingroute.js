@@ -28,6 +28,11 @@ router.get(
     isLoggedIn,
     listingController.renderNewForm);
 
+router.get(
+    "/admin/allbookings",
+    isLoggedIn,
+    listingController.allbookings);
+    
 
 router.route("/:id")
 //Show Route

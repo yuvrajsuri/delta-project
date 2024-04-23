@@ -122,7 +122,11 @@ module.exports.postPayRoute = async (req, res) => {
     res.redirect("/listings");
 };
 
-
+module.exports.allbookings = async(req,res)=>{
+    const allbookings = await Book.find({});
+    
+    res.render("listings/allbookings.ejs", {allbookings});
+}
 
 //destroy route
 module.exports.destroyListing = async (req,res)=>{
