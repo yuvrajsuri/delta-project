@@ -49,3 +49,13 @@ module.exports.logout = (req,res,next)=>{
         res.redirect("/listings");
     });
 };
+
+//privacy
+module.exports.privacy = (req,res)=>{
+    res.render("includes/privacy.ejs");
+};
+
+//terms
+module.exports.terms = (req,res)=>{
+    res.render("includes/terms.ejs");
+};

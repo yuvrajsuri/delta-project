@@ -3,6 +3,8 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
+    
 }
 
 .container{
@@ -57,7 +59,7 @@ body{
 }
 
 .fa-square-facebook{
-    color: #316FF6;
+    color: #04c0fe;
 }
 .fa-square-instagram{
     color: #E4405F;

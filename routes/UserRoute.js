@@ -35,4 +35,10 @@ router.route("/login")
 //logout route
 router.get("/logout",userController.logout);
 
+//privacy
+router.get("/privacy", userController.privacy);
+
+//terms
+router.get("/terms", userController.terms);
+
 module.exports = router;
