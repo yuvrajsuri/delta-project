@@ -36,11 +36,15 @@
 
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label><br>
-                                    <input name="password" 
-                                    id="password"
-                                    type="password" 
-                                    class="form-control"
-                                    required>
+                                    <div class="input-group">
+                                        <input name="password" id="password" type="password" class="form-control" required>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <input type="checkbox" id="togglePassword">
+                                                <label for="togglePassword">&nbsp;&nbsp;Show password</label>
+                                            </span>
+                                        </div>
+                                    </div>
                                     
                                 </div>
                                 <button class="btn btn-success">SignUp</button><br><br><br>
@@ -54,3 +58,13 @@
         </div>
     </div>    
 </body>
+<script>
+    document.getElementById('togglePassword').addEventListener('change', function (e) {
+        const passwordInput = document.getElementById('password');
+        if (e.target.checked) {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    });
+</script>
