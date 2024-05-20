@@ -24,7 +24,7 @@
                     </div>
                     <div class="mb-3 col-md-6">
                         <label for="year" class="form-label">Year</label><br>
-                        <input name="year" id="year" type="text" maxlength="4" max="2050" min="2024" class="form-control" onkeyup="validateYear(this);" required>
+                        <input name="year" id="year" type="text" maxlength="4" max="2050" min="2024" class="form-control"  required>
 
                     </div>
                 </div>
@@ -60,17 +60,6 @@ function validateMonth(input) {
         // Update the input value with the validated month
         input.value = month;
     }
-}
-
-function validateYear(input) {
-    // Remove non-numeric characters
-    let year = input.value.replace(/\D/g, '');
-
-    // Ensure the year is within the specified range
-    year = Math.max(2024, Math.min(2050, year));
-
-    // Update the input value with the sanitized year
-    input.value = year;
 }
 
 function validateCVV(input) {
