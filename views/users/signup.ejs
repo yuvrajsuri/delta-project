@@ -1,0 +1,70 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    <div class="login-container">
+        <div class="row mt-4">
+            <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-2 col-sm-10 offset-sm-1 animated-form">
+                <div class="card p-4 glowing-card">
+                    <h1 class="col-6 offset-3">SignUp on Trippy</h1>
+                    <div class="row mt-3">
+                        <div class="col-6 offset-3">
+                            <form action="/signup" method="POST"class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username</label><br>
+                                    <input name="username" 
+                                    id="username"
+                                    type="text" 
+                                    class="form-control"
+                                    required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid username.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label><br>
+                                    <input name="email" 
+                                    id="email"
+                                    type="email" 
+                                    class="form-control"
+                                    required>
+                                    
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label><br>
+                                    <div class="input-group">
+                                        <input name="password" id="password" type="password" class="form-control" required>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <input type="checkbox" id="togglePassword">
+                                                <label for="togglePassword">&nbsp;&nbsp;Show password</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <button class="btn btn-success">SignUp</button><br><br><br>
+                                <a href="/login" class="offset-4"><b>Already have an account </b></a>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>    
+</body>
+<script>
+    document.getElementById('togglePassword').addEventListener('change', function (e) {
+        const passwordInput = document.getElementById('password');
+        if (e.target.checked) {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    });
+</script>

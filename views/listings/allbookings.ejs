@@ -1,0 +1,46 @@
+<% layout("/layouts/boilerplate") %>
+<style>
+    table{
+        border: 2px solid black;
+        margin: 0 auto;
+        width: 80%;
+        margin: 20px auto 20px auto;
+    }
+    th,td {
+        padding : 10px;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <%if(allbookings.length !=0){ %>
+        <table>
+            <tr>
+                <th>S No.</th>
+                <th>Username</th>
+                <th>Number of guests</th>
+                <th>from</th>
+                <th>to</th>
+                <th>check-in time</th>
+                <th>contact</th>
+                <th>rate</th>
+            </tr>
+
+            <% for(let bookings of allbookings) { %>
+                <tr>
+                    <td><%= allbookings.indexOf(bookings)+1 %></td>
+                    <td><%= bookings.username %></td>
+                    <td><%= bookings.guest%></td>
+                    <td><%= bookings.from%></td>
+                    <td><%= bookings.to%></td>
+                    <td><%= bookings.time%></td>
+                    <td><%= bookings.contact%></td>
+                    <td><%= bookings.rate%></td>
+                </tr>
+                <% } %>
+        </table>
+        
+        <% } else{ %>
+            <h3>No bookings yet</h3>
+        <% } %>
+</body>
