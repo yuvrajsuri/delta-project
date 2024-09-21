@@ -98,6 +98,10 @@ app.use((req,res,next)=>{
 });
 
 
+app.get('/', (req, res) => {
+    res.redirect('/listings');
+});
+
 app.use("/listings", listingRoute);
 app.use("/listings/:id/reviews", ReviewRoute);
 app.use("/", UserRoute);
@@ -116,7 +120,7 @@ app.use((err,req,res,next)=>{
     next();
 });
 
-app.listen("3000",()=>{
+app.listen("3001",()=>{
     console.log("Server listening to port 3000");
 });
 
